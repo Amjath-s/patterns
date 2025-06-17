@@ -48,7 +48,7 @@ def HollowLeft():
                 print("*",end="")
             print("")
 
-def RightalignedTriangle():
+def RightalignedhollowTriangle():
     no_of_rows=int(input("enter the no of rows"))
     for i in range(1,no_of_rows+1):
         for j in range(1,no_of_rows-i+1):
@@ -67,6 +67,16 @@ def RightalignedTriangle():
                 else:
                     print(" ",end="")
         print("")
+def fullStarPyramid():
+    no_of_rows=int(input(" enter the no of rows"))
+    for i in range(1,no_of_rows+1):
+        blankspace=no_of_rows-i
+        start=2*i-1
+       
+        print(" "*blankspace+"*"*start+" "*blankspace,end="")
+        print(" ")
+   
+
         
 
 
@@ -85,7 +95,9 @@ def Printpattern():
         print("1:for Solid Sqaure \n" 
         "2:for Hollow square\n"
         "3:for left alinged  right angled trianlge\n"
-        "4:for hollow aligned right angled triangle\n")
+        "4:for left hollow aligned right angled triangle\n"
+        "5: for hollow right aligned triangle\n"
+        "6:centered star")
         choice=int(input("Enter your choice "))
 
         if choice==1:
@@ -98,7 +110,9 @@ def Printpattern():
         elif choice==4:
             HollowLeft()
         elif choice==5:
-            RightalignedTriangle()
+            RightalignedhollowTriangle()
+        elif choice==6:
+            fullStarPyramid()
        
 
 
