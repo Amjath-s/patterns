@@ -91,6 +91,18 @@ def mirrorPyramid():
         blank_space=no_of_rows-i
         print(" "*blank_space+"*"*i+" "*blank_space)
     print(" ")
+def diamond():
+    no_of_rows=int(input("enter the no of rows "))
+    for i in range(1,no_of_rows+1):
+        star=2*i-1
+        blankspace=no_of_rows-i
+        print(" "*blankspace+"*"*star+" "*blankspace)
+  
+    for i in range(no_of_rows,0,-1):
+        star=2*i-1
+        blankspace=no_of_rows-i
+        print(" "*blankspace+"*"*star+" "*blankspace)
+    print("")
 
 
    
@@ -137,6 +149,8 @@ def Printpattern():
             hollowPyramid()
         elif choice==8:
             mirrorPyramid()
+        elif choice==9:
+            diamond()
 
 
 
