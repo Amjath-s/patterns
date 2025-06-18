@@ -75,6 +75,24 @@ def fullStarPyramid():
        
         print(" "*blankspace+"*"*start+" "*blankspace,end="")
         print(" ")
+def hollowPyramid():
+    no_of_row=int(input("no of rows"))
+    for i in range(1,no_of_row+1):
+        blankspace=no_of_row-i
+        for j in range(1,i+1):
+            
+            if j==i or j==no_of_row:
+                insideblank=2*i-1
+                print(" "*blankspace+"*"+""*insideblank+""*blankspace)
+        print("")
+def mirrorPyramid():
+    no_of_rows=int(input("enter the no of rows "))
+    for i in range(1,no_of_rows+1):
+        blank_space=no_of_rows-i
+        print(" "*blank_space+"*"*i+" "*blank_space)
+    print(" ")
+
+
    
 
         
@@ -97,7 +115,9 @@ def Printpattern():
         "3:for left alinged  right angled trianlge\n"
         "4:for left hollow aligned right angled triangle\n"
         "5: for hollow right aligned triangle\n"
-        "6:centered star")
+        "6:centered star\n"
+        "7:hollow centered start\n"
+        "8:Mirror Pyramid")
         choice=int(input("Enter your choice "))
 
         if choice==1:
@@ -113,7 +133,10 @@ def Printpattern():
             RightalignedhollowTriangle()
         elif choice==6:
             fullStarPyramid()
-       
+        elif choice==7:
+            hollowPyramid()
+        elif choice==8:
+            mirrorPyramid()
 
 
 
