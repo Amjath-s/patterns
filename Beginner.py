@@ -104,13 +104,68 @@ def diamond():
         print(" "*blankspace+"*"*star+" "*blankspace)
     print("")
 
+def hollowDiamond():
+    no_of_rows = int(input("Enter the number of rows: "))
+    # Upper half
+    for i in range(1, no_of_rows + 1):
+        print(" " * (no_of_rows - i), end="")
+        if i == 1:
+            print("*")
+        else:
+            print("*" + "" * (2 * i - 3) + "*")
+    # Lower half
+    for i in range(no_of_rows - 1, 0, -1):
+        print(" " * (no_of_rows - i), end="")
+        if i == 1:
+            print("*")
+        else:
+            print("*" + "" * (2 * i - 3) + "*")
+
+def numberTriangle():
+    no_of_rows=int(input("enter no of rows "))
+    for i in range(1,no_of_rows+1):
+        for j in range(1,i+1):
+            print(j,end="")
+        print("")
 
    
+def invertedTriangle():
+    no_of_rows=int(input("enter the no of rows "))
+    for i in range(no_of_rows,0,-1):
+        for j in range(1,i+1):
+            print(j,end="")
+        print("")
 
+
+def reverseTriangle():
+    no_of_rows=int(input("enter no of rows "))
+    for i in range(no_of_rows,0,-1):
+        for j in range(i,0,-1):
+            print(j,end="")
+        print("")
         
 
 
-          
+def continousTriangle():
+    no_of_rows=int(input("enter the no of rows "))
+    c=0
+
+    for i in range(1,no_of_rows+1):
+       
+        for j in range(1,i+1):
+            # print("c is ",c)
+            d=c+j
+            print(d,end="")
+       
+        c=d
+       
+       
+        # print("new c is",c)
+        print("")
+        
+
+
+        
 
           
     
@@ -129,7 +184,13 @@ def Printpattern():
         "5: for hollow right aligned triangle\n"
         "6:centered star\n"
         "7:hollow centered start\n"
-        "8:Mirror Pyramid")
+        "8:Mirror Pyramid\n"
+        "9:diamond\n"
+        "10:hollow diamond\n"
+        "11:Number Triangle\n"
+        "12:Inverted Triangle\n"
+        "13:ReversenumberTriangle\n"
+        "14:Continous Number Triangle")
         choice=int(input("Enter your choice "))
 
         if choice==1:
@@ -151,6 +212,16 @@ def Printpattern():
             mirrorPyramid()
         elif choice==9:
             diamond()
+        elif choice==10:
+            hollowDiamond()
+        elif choice==11:
+            numberTriangle()
+        elif choice==12:
+            invertedTriangle()
+        elif choice==13:
+            reverseTriangle()
+        elif choice==14:
+            continousTriangle()
 
 
 
